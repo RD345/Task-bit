@@ -1,6 +1,6 @@
 <?php
 // Initialize the session
-require('Model/header.php');
+session_start();
 
 // Unset all of the session variables
 $_SESSION = array();
@@ -9,20 +9,20 @@ $_SESSION = array();
 session_destroy();
  ?>
  
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Logout</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+    <meta charset="UTF-8">
+    <title>Log out</title>
+    <link rel=stylesheet href=Model/project.css>
 </head>
 <body>
     <div class="page-header">
         <h1>You have been logged out</h1>
     </div>
-    <p>
-        <a href="login.php" class="btn btn-warning">Log in</a>
-        <a href="signup.php" class="btn btn-danger">Sign up</a>
+    <p class = "center">
+        <a href="login.php" class="btn-logout">Log in</a>
+        <a href="signup.php" class="btn-logout">Sign up</a>
     </p>
 </body>
 </html>
